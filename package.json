@@ -10,7 +10,9 @@
   "author": "Ainkra",
   "license": "ISC",
   "dependencies": {
+    "apollo-server-express": "^3.12.1",
     "express": "^4.18.2",
+    "graphql": "^16.8.0",
     "nodemon": "^3.0.1"
   }
 }

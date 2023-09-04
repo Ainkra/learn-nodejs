@@ -1,4 +1,5 @@
 import express from 'express'
+import { ApolloServer, gql } from 'apollo-server-express'
 import products from './data.js'
 
 const app = express()
@@ -11,10 +12,8 @@ app.get('/', (req, res) => {
 // Faire un middleware
 /* Un middleware permet d'exécuter quelque chose avant la requête.
 Par exemple on souhaite reçevoir un log avant qu'une requête get soit exécutée on fera
-cela*/
-
-// On notera la fonction next qui permet de dire de continuer
-// une fois que la fonction est exécutée.
+cela. On notera la fonction next qui permet de dire de continuer
+une fois que la fonction est exécutée.*/
 const logger = (req, res, next) => {
     console.log(req.url)
     console.log(req.params)
